@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Detector",
+    "version": "1.0",
+    "description": "Detects if YouTube is playing in any Chrome tab",
+    "permissions": ["tabs", "notifications", "scripting", "storage"], 
+    "background": {
+        "service_worker": "background.js"
+    },
+    "host_permissions": [
+        "*://*.youtube.com/*"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}

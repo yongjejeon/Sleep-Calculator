@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# Sleep Time Calculator with Google Calendar Integration
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a sleep time calculator that integrates with Google Calendar to help you plan your optimal sleep schedule based on your upcoming events. It calculates when you need to go to sleep for a full REM cycle and alerts you if your sleep goal conflicts with any scheduled events. Sleeping for a full REM cycle will allow you to wake up in a fresh state!
 
-## Available Scripts
+## Features
+- **Optimal Sleep Calculation**: Calculates the best time to go to sleep based on REM cycles.
+- **Event Conflict Detection**: Alerts you if your desired wake-up time conflicts with events in your Google Calendar.
+- **Weekly Schedule Display**: Shows upcoming events for the week.
 
-In the project directory, you can run:
+## Setup Instructions
 
-### `npm start`
+### Prerequisites
+1. **Node.js**: Ensure that you have Node.js installed on your machine.
+2. **Google API Setup**: You’ll need to set up a Google API project and enable the Google Calendar API.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/yourusername/your-repo.git
+   cd your-repo
+   ```
 
-### `npm test`
+2. **Install Dependencies**:
+   Install the necessary packages by running:
+   ```bash
+   npm install
+   ```
+   
+3. **Install `gapi-script`**:
+   Since this app uses the Google API, install `gapi-script`:
+   ```bash
+   npm install gapi-script
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. **Create a `.env` File**:
+   In the root directory of your project, create a `.env` file to store your API keys.
 
-### `npm run build`
+   ```plaintext
+   REACT_APP_GOOGLE_API_KEY=your_google_api_key
+   REACT_APP_GOOGLE_OAUTH_CLIENT_ID=your_oauth_client_id
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   - Replace `your_google_api_key` with your actual Google API key.
+   - Replace `your_oauth_client_id` with your OAuth client ID.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Running the App
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Start the Development Server**:
+   To run the app locally, use:
+   ```bash
+   npm start
+   ```
 
-### `npm run eject`
+2. **Access the App**:
+   Open your browser and go to `http://localhost:3000` to use the app.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Usage
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Set Desired Wake-Up Time**: Enter the time you'd like to wake up, and click "Run" to calculate the optimal sleep schedule.
+- **View Weekly Schedule**: The app displays your weekly events to help you plan around your schedule.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

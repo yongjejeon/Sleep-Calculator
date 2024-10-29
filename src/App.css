@@ -1,38 +1,186 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f3f4f6;
+  color: #333;
+  overflow-y: hidden; /* Prevents scrolling on the body */
+}
+
 .App {
+  background-image: url('./stars.jpeg'); /* Using the imported image as background */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 90%;
+  max-width: 600px;
+  height: 90vh;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Makes all content within App scrollable */
+  text-align: center; /* Center-align all text within the App container */
+}
+
+/* Additional styles remain the same */
+
+
+/* Heading styles */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-weight: bold;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Wake-up input styling */
+.wake-up-input label {
+  font-size: 1rem;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input[type="time"] {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin-top: 5px;
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Button styling */
+button {
+  padding: 12px 24px;
+  background-color: #868686;
   color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #4c4c4c;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:focus {
+  outline: none;
 }
+
+/* Paragraph styling */
+p {
+  font-size: 1rem;
+  margin: 10px 0;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.rem-message p {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 5px 0;
+  text-align: center;
+}
+
+.rem-message strong {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.alarm-time {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #e74c3c;
+  margin-top: 5px;
+}
+
+/* Alarm and user-alarm box styling */
+.alarm-box, .user-alarm-box {
+  border: 2px solid #ccc;
+  padding: 16px;
+  margin: 10px 0;
+  border-radius: 8px;
+  background-color: #ecf0f1;
+  text-align: center;
+}
+
+/* Weekly Schedule styling */
+h2 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-top: 30px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Schedule container with scrolling */
+.schedule-container {
+  max-height: 250px; /* Fixed height for scrolling */
+  overflow-y: auto;
+  margin-top: 10px;
+  padding-right: 10px; /* Extra padding to prevent scroll bar overlap */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+li {
+  background: #ecf0f1;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+li strong {
+  color: #34495e;
+  font-size: 1.1rem;
+}
+
+li br + span {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+/* Countdown display */
+#countdown {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #c0392b;
+  margin-top: 20px;
+}
+
+/* Conflict message styling */
+.conflict-message {
+  font-size: 1rem;
+  color: #c0392b;
+  margin-top: 10px;
+  font-weight: bold;
+}
+/* Countdown display */
+.countdown-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #ffffff; /* Countdown text color set to white */
+  margin-top: 20px;
+}
+

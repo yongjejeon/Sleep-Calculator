@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>YouTube Habit Tracker</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+        if (chrome && chrome.storage) {
+          console.log("popup.html: chrome.storage is available");
+          chrome.storage.local.set({ testKey: "testValue" }, () => {
+            console.log("popup.html: testKey set in chrome.storage");
+            chrome.storage.local.get("testKey", (result) => {
+              console.log("popup.html: Retrieved testKey from chrome.storage:", result.testKey);
+            });
+          });
+        } else {
+          console.log("popup.html: chrome.storage is NOT available");
+        }
+      </script>
+    <!-- Load the React app's JavaScript bundle -->
+    <script src="./static/js/main.389778a6.js"></script>
+  </body>
+</html>
