@@ -1,4 +1,4 @@
-# Sleep Time Calculator with Google Calendar Integration
+# Sleep Time Calculator
 
 This project is a sleep time calculator that integrates with Google Calendar to help you plan your optimal sleep schedule based on your upcoming events. It calculates when you need to go to sleep for a full REM cycle and alerts you if your sleep goal conflicts with any scheduled events. Sleeping for a full REM cycle will allow you to wake up in a fresh state!
 
@@ -12,6 +12,7 @@ It uses the google API to retrieve google calendar events from the user's google
 - **Optimal Sleep Calculation**: Calculates the best time to go to sleep based on REM cycles.
 - **Event Conflict Detection**: Alerts you if your desired wake-up time conflicts with events in your Google Calendar.
 - **Weekly Schedule Display**: Shows upcoming events for the week.
+- **Count Down Until Next Event**: Shows the remaining time until next event.
 
 ## Setup Instructions
 
