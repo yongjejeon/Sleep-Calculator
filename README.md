@@ -2,6 +2,12 @@
 
 This project is a sleep time calculator that integrates with Google Calendar to help you plan your optimal sleep schedule based on your upcoming events. It calculates when you need to go to sleep for a full REM cycle and alerts you if your sleep goal conflicts with any scheduled events. Sleeping for a full REM cycle will allow you to wake up in a fresh state!
 
+## API USED
+It uses the google API to retrieve google calendar events from the user's google calendar. This is to calculate the optimal sleep schedule for the user and check if the user's desired wake-up time conflicts with their shedule. If not, it provides the user with 2 different alarm clock times. To allow user sign in, you also need to provide Google_OAUTH_CLIENT_ID.
+
+1. The optional wake-up time before the next scheduled event
+2. the optional wake-up time before the desired wake-up time
+
 ## Features
 - **Optimal Sleep Calculation**: Calculates the best time to go to sleep based on REM cycles.
 - **Event Conflict Detection**: Alerts you if your desired wake-up time conflicts with events in your Google Calendar.
@@ -59,4 +65,15 @@ This project is a sleep time calculator that integrates with Google Calendar to 
 
 - **Set Desired Wake-Up Time**: Enter the time you'd like to wake up, and click "Run" to calculate the optimal sleep schedule.
 - **View Weekly Schedule**: The app displays your weekly events to help you plan around your schedule.
+
+## AI Generated Portions
+Most of the coded is helped by AI. Error handling and debugging took the most time. CSS was partially helped by AI, but mostly made by me.
+
+I provided the overall logic of the code, for example i would ask to get the time for next event and calculate the remaining time by substracting it from current time. Calculate if a REM cycle could fit into the remaining time and if it does, provide the optimal time to set the alarm.
+
+
+## Room for Improvements
+
+Initally, I wanted to create an app that checks if youtube is open in another chrome tab. I was able to create an extension that checks if youtube is open in another tab, but was not able to connect it to App.js. If this problem is solved, I would implment a feature that reminds the user to turn off youtube if the expected sleep time is less than 4 REM cycles, which is 6 hours.
+
 
