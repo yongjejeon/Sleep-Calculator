@@ -68,10 +68,7 @@ It uses the google API to retrieve google calendar events from the user's google
 - **View Weekly Schedule**: The app displays your weekly events to help you plan around your schedule.
 
 ## AI Generated Portions
-Most of the coded is helped by AI. Error handling and debugging took the most time. CSS was partially helped by AI, but mostly made by me.
-
-I provided the overall logic of the code, for example i would ask to get the time for next event and calculate the remaining time by substracting it from current time. Calculate if a REM cycle could fit into the remaining time and if it does, provide the optimal time to set the alarm.
-
+CSS was partially helped by AI, but mostly made by me.
 
 ## Room for Improvements
 
